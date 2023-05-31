@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="navbar" id="mynavbar">
+        <a href="/index" class="active" style="border-left: 0;"><i class="fa fa-home"></i></a>
+        <a href="/registerOrganisation" class="nav-link">Регистрирай се</a>
+        <a href="/login" class="nav-link">Впиши се</a>
+        <a href="gallery.html" class="nav-link">Еднократни активности</a>
+        <a href="pricing.html" class="nav-link">Продължителни активности</a>
+        <a href="about.html" class="nav-link">Организации</a>
+        <a href="" id="locationObject"><i class="fa fa-location-arrow" style="color: #ffc107;"></i> Varna</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="container">
+        <img src="img/logo1.png" class="image">
+        <hr class="breakline3">
+        <div class="info">
+        <a href="">Собственик: Александър Димитров</a>
+        <br>
+        <a href="">Дата на създаване: </a>
+        </div>
+        <div class="input-group" id="name">
+            <label class="label">Име на организацията</label>
+            <input autocomplete="off" name="Email" id="editable" class="input" type="email">
+        </div>
+        <hr class="breakline">
+        <hr class="breakline2">
+        <div class="content">
+            <div class="input-group">
+                <label class="label">Имейл</label>
+                <input autocomplete="off" name="Email" id="editable" class="input" type="text">
+            </div>
+            <div class="input-group">
+                <label class="label">Булстат</label>
+                <input autocomplete="off" name="Email" id="editable" class="input" type="tel">
+            </div>
+            <div class="input-group">
+                <label class="label">Телефон</label>
+                <input autocomplete="off" name="Email" id="editable" class="input" type="email">
+            </div>
+            <div class="input-group">
+                <label class="label">Адрес</label>
+                <input autocomplete="off" name="Email" id="editable" class="input" type="email">
+            </div>
+            <div class="inputs2">
+                <div class="input-group">
+                    <label class="label">Опция за благотворителност</label>
+                    <input autocomplete="off" name="Email" id="editable" class="input" type="email">
+                </div>
+                <div class="input-group">
+                    <label class="label">Категория</label>
+                    <input autocomplete="off" name="Email" id="editable" class="input" type="email">
+                </div>
+                <div class="input-group">
+                    <label class="label">За организацията</label>
+                    <textarea name="Email" id="aboutOrg" class="input" style="height: 18vh;"></textarea>
+                </div>
+                
+            </div>
+        </div>
+        <button id="edit" class="edit-btn"><i class="fa fa-edit"></i></button>
+        <button id="cancel" class="edit-btn"><i class="fa fa-remove"></i></button>
+        <button type="submit" class="save-btn" id="save">Запази</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

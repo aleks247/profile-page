@@ -1,0 +1,289 @@
+@import url(fonts/Font/OpenSans-Italic.ttf);
+
+:root{
+    --purple:#656598;
+    --red:#ee4557;
+    --yellow:#f9a122;
+    --blue:#a8c9db;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.image{
+    user-select: none;
+    position: relative;
+    left: 1.5vw;
+    top: 2vh;
+    width: 15vw;
+    height: 30vh;
+}
+
+.Location{
+    float: right;
+}
+
+#locationObject {
+    float: right;border: 0;pointer-events: none;color: var(--purple);
+}
+
+.navbar {
+    background-color: white;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 5;
+    border-radius: 15px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: var(--purple);
+}
+
+.navbar a::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background: #fdb62f;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.navbar a:hover::before {
+    width: 105%;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.navbar a.active {
+    color: white;
+    background: #fd4d40;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.container {
+    background-color: var(--blue);
+    width: 80vw;
+    height: 90vh;
+    position: relative;
+    margin: auto;
+    top: 7vh;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.374),
+    -15px -15px 30px rgba(0, 0, 0, 0.374);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: var(--purple);
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    color: var(--blue);
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fdfdfd99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: transparent;
+  }
+  
+  .input-group:hover .label, .input:focus {
+    color: #ffffff;
+  }
+
+  .input-group{
+    padding-bottom: 4vh;
+  }
+ 
+  .content{
+    background-color: transparent;
+    position: relative;
+    bottom: 48vh;
+    left: 45vh;
+  }
+
+  .inputs2{
+    position: relative;
+    bottom: 58.1vh;
+    left: 25vw;
+  }
+  
+  .breakline {
+    position: relative;
+    bottom: 47vh;
+    left: 7.6vw;
+    max-width: 57.5vw;
+    border: 1px solid white;
+}
+
+.breakline2 {
+    position: relative;
+    bottom: 30vh;
+    right: 21.2vw;
+    max-width: 30vw;
+    transform: rotate(90deg);
+    border: 1px solid white;
+}
+
+.breakline3 {
+    width: 10vw;
+    border: 1px white solid;
+    position: relative;
+    right: 31vw;
+    top: 0.8vh;
+}
+
+#name {
+    position: relative;
+    left: 45vh;
+    bottom: 45vh;
+}
+
+#name input{
+    max-width: 500px;
+    height: 7vh;
+    font-size: 30px;
+}
+
+#name label{
+    font-size: 30px;
+}
+
+.info {
+    position: relative;
+    left: 1.6vw;
+    top: 1vh;
+    width: 15vw;
+    height: 17vh;
+    border-radius: 30px;
+    background: var(--purple);
+    /* box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60); */
+}
+   
+.info a {
+    color: white;
+    position: relative;
+    top: 2vh;
+    left: 1.2vw;
+    text-decoration: none;
+    font-size: 18px; 
+    pointer-events: none;  
+}
+
+input{
+    pointer-events: none;
+}
+
+textarea{
+    pointer-events: none;
+}
+
+.save-btn {
+    position: fixed;
+    bottom: 6vh;
+    left: 77.5vw;
+    width: 150px;
+    height: 60px;
+    border: 3px solid #31fd49;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    animation: ease-in;
+  }
+  
+.save-btn:hover {
+    background: #31fd49;
+    color: white;
+    font-size: 1.5em;
+}
+
+.edit-btn {
+    color: var(--purple);
+    position: fixed; 
+    bottom: 72vh;
+    left: 83vw;
+    background-color: transparent;
+    border: 0;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#cancel{
+    display: none;
+    color: red;
+}
